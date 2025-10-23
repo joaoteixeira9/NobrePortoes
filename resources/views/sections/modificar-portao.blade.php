@@ -28,16 +28,21 @@
                             @foreach($portao->fotos_antes as $index => $foto)
                             <div class="col-md-4 col-lg-3">
                                 <div class="card border-0 shadow-sm h-100 transition-all">
-                                    <img src="{{ asset('uploads/antes/' . $foto) }}" 
-                                         class="card-img-top cursor-pointer"
-                                         style="height: 200px; object-fit: cover;"
-                                         alt="Foto Antes"
-                                         data-bs-toggle="modal" 
-                                         data-bs-target="#imageModal"
-                                         data-bs-image="{{ asset('uploads/antes/' . $foto) }}"
-                                         data-bs-title="Antes - Imagem {{ $index + 1 }}">
+                                    <img src="{{ asset('uploads/antes/' . $foto) }}" class="card-img-top cursor-pointer" style="height: 200px; object-fit: cover;" alt="Foto Antes" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="{{ asset('uploads/antes/' . $foto) }}" data-bs-title="Antes - Imagem {{ $index + 1 }}">
                                     <div class="card-footer bg-white border-top-0">
-                                        <small class="text-muted">Imagem {{ $index + 1 }}</small>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <small class="text-muted">Imagem {{ $index + 1 }}</small>
+                                            <form action="{{ route('portoes.delete-foto') }}" method="POST" class="d-inline">
+                                                @csrf
+                                                @method('DELETE')
+                                                <input type="hidden" name="portao_id" value="{{ $portao->id }}">
+                                                <input type="hidden" name="categoria" value="fotos_antes">
+                                                <input type="hidden" name="nome_arquivo" value="{{ $foto }}">
+                                                <button type="submit" class="btn btn-sm btn-outline-danger" onclick="return confirm('Tem certeza que deseja excluir esta foto?')">
+                                                    <i class="bi bi-trash"></i>
+                                                </button>
+                                            </form>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -59,16 +64,21 @@
                             @foreach($portao->fotos_producao as $index => $foto)
                             <div class="col-md-4 col-lg-3">
                                 <div class="card border-0 shadow-sm h-100 transition-all">
-                                    <img src="{{ asset('uploads/producao/' . $foto) }}" 
-                                         class="card-img-top cursor-pointer"
-                                         style="height: 200px; object-fit: cover;"
-                                         alt="Foto Produção"
-                                         data-bs-toggle="modal" 
-                                         data-bs-target="#imageModal"
-                                         data-bs-image="{{ asset('uploads/producao/' . $foto) }}"
-                                         data-bs-title="Produção - Imagem {{ $index + 1 }}">
+                                    <img src="{{ asset('uploads/producao/' . $foto) }}" class="card-img-top cursor-pointer" style="height: 200px; object-fit: cover;" alt="Foto Produção" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="{{ asset('uploads/producao/' . $foto) }}" data-bs-title="Produção - Imagem {{ $index + 1 }}">
                                     <div class="card-footer bg-white border-top-0">
-                                        <small class="text-muted">Imagem {{ $index + 1 }}</small>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <small class="text-muted">Imagem {{ $index + 1 }}</small>
+                                            <form action="{{ route('portoes.delete-foto') }}" method="POST" class="d-inline">
+                                                @csrf
+                                                @method('DELETE')
+                                                <input type="hidden" name="portao_id" value="{{ $portao->id }}">
+                                                <input type="hidden" name="categoria" value="fotos_producao">
+                                                <input type="hidden" name="nome_arquivo" value="{{ $foto }}">
+                                                <button type="submit" class="btn btn-sm btn-outline-danger" onclick="return confirm('Tem certeza que deseja excluir esta foto?')">
+                                                    <i class="bi bi-trash"></i>
+                                                </button>
+                                            </form>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -90,16 +100,21 @@
                             @foreach($portao->fotos_entrega as $index => $foto)
                             <div class="col-md-4 col-lg-3">
                                 <div class="card border-0 shadow-sm h-100 transition-all">
-                                    <img src="{{ asset('uploads/entrega/' . $foto) }}" 
-                                         class="card-img-top cursor-pointer"
-                                         style="height: 200px; object-fit: cover;"
-                                         alt="Foto Entrega"
-                                         data-bs-toggle="modal" 
-                                         data-bs-target="#imageModal"
-                                         data-bs-image="{{ asset('uploads/entrega/' . $foto) }}"
-                                         data-bs-title="Entrega - Imagem {{ $index + 1 }}">
+                                    <img src="{{ asset('uploads/entrega/' . $foto) }}" class="card-img-top cursor-pointer" style="height: 200px; object-fit: cover;" alt="Foto Entrega" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="{{ asset('uploads/entrega/' . $foto) }}" data-bs-title="Entrega - Imagem {{ $index + 1 }}">
                                     <div class="card-footer bg-white border-top-0">
-                                        <small class="text-muted">Imagem {{ $index + 1 }}</small>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <small class="text-muted">Imagem {{ $index + 1 }}</small>
+                                            <form action="{{ route('portoes.delete-foto') }}" method="POST" class="d-inline">
+                                                @csrf
+                                                @method('DELETE')
+                                                <input type="hidden" name="portao_id" value="{{ $portao->id }}">
+                                                <input type="hidden" name="categoria" value="fotos_entrega">
+                                                <input type="hidden" name="nome_arquivo" value="{{ $foto }}">
+                                                <button type="submit" class="btn btn-sm btn-outline-danger" onclick="return confirm('Tem certeza que deseja excluir esta foto?')">
+                                                    <i class="bi bi-trash"></i>
+                                                </button>
+                                            </form>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -138,14 +153,14 @@
                                 <i class="bi bi-tag-fill text-primary me-3 fs-5"></i>
                                 <div>
                                     <strong class="d-block text-muted small">Titulo</strong>
-                                    <span class="fs-6">{{ $portao->tipo }}</span>
+                                    <input type="text" name="tipo" class="form-control" value="{{ $portao->tipo }}" required>
                                 </div>
                             </div>
                             <div class="d-flex align-items-center mb-3 p-2 rounded hover-effect">
                                 <i class="bi bi-box-seam text-primary me-3 fs-5"></i>
                                 <div>
                                     <strong class="d-block text-muted small">Material</strong>
-                                    <span class="fs-6">{{ $portao->material }}</span>
+                                    <input type="text" name="material" class="form-control" value="{{ $portao->material }}" required>
                                 </div>
                             </div>
                         </div>
@@ -154,7 +169,7 @@
                         <div class="col-12">
                             <div class="border-top pt-4">
                                 <strong class="text-muted small d-block mb-2">Descrição</strong>
-                                <p class="fs-6 mb-0 text-dark">{{ $portao->descricao }}</p>
+                                <textarea name="descricao" class="form-control" rows="3" required>{{ $portao->descricao }}</textarea>
                             </div>
                         </div>
                     </div>

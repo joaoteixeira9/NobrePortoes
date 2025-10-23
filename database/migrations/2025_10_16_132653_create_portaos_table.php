@@ -15,9 +15,6 @@ return new class extends Migration
             $table->id();
             $table->string('tipo');
             $table->string('material');
-            $table->string('cor');
-            $table->decimal('largura', 8, 2);
-            $table->decimal('altura', 8, 2);
             $table->text('descricao');
             $table->json('fotos_antes')->nullable();
             $table->json('fotos_producao')->nullable();

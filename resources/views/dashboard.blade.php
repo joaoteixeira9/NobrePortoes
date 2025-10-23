@@ -44,20 +44,22 @@
                     <div class="card-body">
                         <div class="mb-3">
                             <strong>Material:</strong> {{ $portao->material }}<br>
-                            <strong>Medidas:</strong> {{ $portao->largura }}m x {{ $portao->altura }}m<br>
-                            <strong>Cor:</strong> {{ $portao->cor }}<br>
                             <strong>Descrição:</strong> {{ $portao->descricao }}
                         </div>
                         <div class="d-flex gap-2 flex-wrap">
                             <a href="/visualizar-portao/{{ $portao->id }}" class="btn btn-sm btn-outline-primary">
                                 <i class="bi bi-eye me-1"></i>Visualizar
                             </a>
-                            <button class="btn btn-sm btn-outline-warning">
+                            <a href="/modificar-portao/{{ $portao->id }}" class="btn btn-sm btn-outline-warning">
                                 <i class="bi bi-pencil me-1"></i>Modificar
-                            </button>
-                            <button class="btn btn-sm btn-outline-danger">
-                                <i class="bi bi-trash me-1"></i>Deletar
-                            </button>
+                            </a>
+                            <form action="/deletar-portao/{{ $portao->id }}" method="POST" onsubmit="return confirm('Tem certeza que deseja excluir este portão?')">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-sm btn-outline-danger">
+                                    <i class="bi bi-trash me-1"></i>Deletar
+                                </button>
+                            </form>
                         </div>
                     </div>
                 </div>
