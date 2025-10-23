@@ -1,8 +1,6 @@
-@extends('welcome')
-@section('content')
 <section class="py-5 box" id="servicos">
-    <div class="container">
-    <h2 class="section-title text-center">Nossos Serviços</h2>
+    <div class="container mt-5">
+    <h2 class="text-center">Nossos Serviços</h2>
     <div class="row g-4">
         <div class="col-md-4">
             <div class="card h-100 text-center shadow-sm">
@@ -66,4 +64,3 @@
         </div>
     </div>
 </section>
-@endsection

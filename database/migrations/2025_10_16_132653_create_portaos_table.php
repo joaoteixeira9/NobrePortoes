@@ -1,0 +1,36 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     */
+    public function up(): void
+    {
+        Schema::create('portaos', function (Blueprint $table) {
+            $table->id();
+            $table->string('tipo');
+            $table->string('material');
+            $table->string('cor');
+            $table->decimal('largura', 8, 2);
+            $table->decimal('altura', 8, 2);
+            $table->text('descricao');
+            $table->json('fotos_antes')->nullable();
+            $table->json('fotos_producao')->nullable();
+            $table->json('fotos_entrega')->nullable();
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::dropIfExists('portaos');
+    }
+};

@@ -64,15 +64,9 @@ body {
 }
     
 .card {
-    transition: transform 0.3s, box-shadow 0.3s;
     border: none;
     border-radius: 10px;
     overflow: hidden;
-}
-    
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
     
 .card-img-top {
@@ -94,16 +88,6 @@ body {
 .btn-primary:hover {
     background-color: #142c44;
     border-color: #142c44;
-}
-    
-.btn-whatsapp {
-    background-color: #25D366;
-    border-color: #25D366;
-}
-    
-.btn-whatsapp:hover {
-    background-color: #128C7E;
-    border-color: #128C7E;
 }
     
 footer {
@@ -169,4 +153,21 @@ footer {
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.bg-primary {
+    background-color: var(--primary-color) !important;
+}
+
+.text-primary, .text-decoration-underline {
+    color: var(--primary-color) !important;
+}
+
+.radio-primary {
+  border: 2px solid var(--primary-color);
+}
+
+.radio-primary:checked {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
 }
