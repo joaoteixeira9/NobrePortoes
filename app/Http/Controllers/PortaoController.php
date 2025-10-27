@@ -126,4 +126,41 @@ class PortaoController extends Controller
 
         return back();
     }
+
+    public function addFotos(Request $request)
+    {
+        $portao = Portao::findOrFail($request->portao_id);
+        $categoria = $request->categoria;
+
+        $fotosArray = $portao->$categoria ?? [];
+        if (is_string($fotosArray)) {
+            $fotosArray = json_decode($fotosArray, true) ?? [];
+        }
+
+        foreach ($request->file('fotos') as $foto) {
+            $nomeArquivo = time() . '_' . uniqid() . '.' . $foto->getClientOriginalExtension();
+            $pasta = str_replace('fotos_', '', $categoria);
+            $foto->move(public_path('uploads/' . $pasta), $nomeArquivo);
+            $fotosArray[] = $nomeArquivo;
+        }
+
+        $portao->update([$categoria => $fotosArray]);
+
+        return back();
+    }
+
+    public function update(Request $request, $id)
+    {
+        $portao = Portao::findOrFail($id);
+        
+        $data = $request->validate([
+            'tipo' => 'required|string|max:255',
+            'material' => 'required|string|max:255',
+            'descricao' => 'required|string',
+        ]);
+
+        $portao->update($data);
+
+        return redirect('dashboard');
+    }
 }

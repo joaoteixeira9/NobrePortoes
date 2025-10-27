@@ -23,6 +23,7 @@
                                 <h5 class="text-primary mb-0">Fase: Antes</h5>
                                 <small class="text-muted">Fotos iniciais do projeto</small>
                             </div>
+                            <button type="button" class="btn btn-primary btn-sm ms-auto" data-bs-toggle="modal" data-bs-target="#addFotosModal" data-categoria="fotos_antes"><i class="bi bi-plus"></i> Adicionar Fotos</button>
                         </div>
                         <div class="row g-3">
                             @foreach($portao->fotos_antes as $index => $foto)
@@ -32,13 +33,13 @@
                                     <div class="card-footer bg-white border-top-0">
                                         <div class="d-flex justify-content-between align-items-center">
                                             <small class="text-muted">Imagem {{ $index + 1 }}</small>
-                                            <form action="{{ route('portoes.delete-foto') }}" method="POST" class="d-inline">
+                                            <form action="/deletar-fotos" method="POST" class="d-inline">
                                                 @csrf
                                                 @method('DELETE')
                                                 <input type="hidden" name="portao_id" value="{{ $portao->id }}">
                                                 <input type="hidden" name="categoria" value="fotos_antes">
                                                 <input type="hidden" name="nome_arquivo" value="{{ $foto }}">
-                                                <button type="submit" class="btn btn-sm btn-outline-danger" onclick="return confirm('Tem certeza que deseja excluir esta foto?')">
+                                                <button type="submit" class="btn btn-sm btn-outline-danger">
                                                     <i class="bi bi-trash"></i>
                                                 </button>
                                             </form>
@@ -59,6 +60,9 @@
                                 <h5 class="text-warning mb-0">Fase: Produção</h5>
                                 <small class="text-muted">Processo de fabricação</small>
                             </div>
+                            <button type="button" class="btn btn-warning btn-sm ms-auto" data-bs-toggle="modal" data-bs-target="#addFotosModal" data-categoria="fotos_producao">
+                                <i class="bi bi-plus"></i> Adicionar Fotos
+                            </button>
                         </div>
                         <div class="row g-3">
                             @foreach($portao->fotos_producao as $index => $foto)
@@ -68,13 +72,13 @@
                                     <div class="card-footer bg-white border-top-0">
                                         <div class="d-flex justify-content-between align-items-center">
                                             <small class="text-muted">Imagem {{ $index + 1 }}</small>
-                                            <form action="{{ route('portoes.delete-foto') }}" method="POST" class="d-inline">
+                                            <form action="/deletar-fotos" method="POST" class="d-inline">
                                                 @csrf
                                                 @method('DELETE')
                                                 <input type="hidden" name="portao_id" value="{{ $portao->id }}">
                                                 <input type="hidden" name="categoria" value="fotos_producao">
                                                 <input type="hidden" name="nome_arquivo" value="{{ $foto }}">
-                                                <button type="submit" class="btn btn-sm btn-outline-danger" onclick="return confirm('Tem certeza que deseja excluir esta foto?')">
+                                                <button type="submit" class="btn btn-sm btn-outline-danger">
                                                     <i class="bi bi-trash"></i>
                                                 </button>
                                             </form>
@@ -95,6 +99,9 @@
                                 <h5 class="text-success mb-0">Fase: Entrega</h5>
                                 <small class="text-muted">Resultado final instalado</small>
                             </div>
+                            <button type="button" class="btn btn-success btn-sm ms-auto" data-bs-toggle="modal" data-bs-target="#addFotosModal" data-categoria="fotos_entrega">
+                                <i class="bi bi-plus"></i> Adicionar Fotos
+                            </button>
                         </div>
                         <div class="row g-3">
                             @foreach($portao->fotos_entrega as $index => $foto)
@@ -104,13 +111,13 @@
                                     <div class="card-footer bg-white border-top-0">
                                         <div class="d-flex justify-content-between align-items-center">
                                             <small class="text-muted">Imagem {{ $index + 1 }}</small>
-                                            <form action="{{ route('portoes.delete-foto') }}" method="POST" class="d-inline">
+                                            <form action="/deletar-fotos" method="POST" class="d-inline">
                                                 @csrf
                                                 @method('DELETE')
                                                 <input type="hidden" name="portao_id" value="{{ $portao->id }}">
                                                 <input type="hidden" name="categoria" value="fotos_entrega">
                                                 <input type="hidden" name="nome_arquivo" value="{{ $foto }}">
-                                                <button type="submit" class="btn btn-sm btn-outline-danger" onclick="return confirm('Tem certeza que deseja excluir esta foto?')">
+                                                <button type="submit" class="btn btn-sm btn-outline-danger">
                                                     <i class="bi bi-trash"></i>
                                                 </button>
                                             </form>
@@ -142,57 +149,75 @@
                 </div>
             </div>
 
+            <div class="modal fade" id="addFotosModal" tabindex="-1" aria-labelledby="addFotosModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="addFotosModalLabel">Adicionar Fotos</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <form action="/adicionar-fotos" method="POST" enctype="multipart/form-data">
+                            @csrf
+                            <div class="modal-body">
+                                <input type="hidden" name="portao_id" value="{{ $portao->id }}">
+                                <input type="hidden" name="categoria" id="modalCategoria">
+                                <div class="mb-3">
+                                    <label class="form-label">Selecionar Fotos</label>
+                                    <input type="file" name="fotos[]" class="form-control" multiple accept="image/*" required>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                <button type="submit" class="btn btn-primary">Adicionar Fotos</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
             <div class="card shadow-sm">
                 <div class="card-header bg-white border-bottom">
                     <h5 class="mb-0 text-primary">Detalhes do Portão</h5>
                 </div>
                 <div class="card-body">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="d-flex align-items-center mb-3 p-2 rounded hover-effect">
-                                <i class="bi bi-tag-fill text-primary me-3 fs-5"></i>
-                                <div>
-                                    <strong class="d-block text-muted small">Titulo</strong>
-                                    <input type="text" name="tipo" class="form-control" value="{{ $portao->tipo }}" required>
+                    <form action="/portoes/{{ $portao->id }}" method="POST">
+                        @csrf
+                        @method('PUT')
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="d-flex align-items-center mb-3 p-2 rounded hover-effect">
+                                    <i class="bi bi-tag-fill text-primary me-3 fs-5"></i>
+                                    <div class="w-100">
+                                        <strong class="d-block text-muted small">Titulo</strong>
+                                        <input type="text" name="tipo" class="form-control" value="{{ $portao->tipo }}" required>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="d-flex align-items-center mb-3 p-2 rounded hover-effect">
-                                <i class="bi bi-box-seam text-primary me-3 fs-5"></i>
-                                <div>
-                                    <strong class="d-block text-muted small">Material</strong>
-                                    <input type="text" name="material" class="form-control" value="{{ $portao->material }}" required>
+                                <div class="d-flex align-items-center mb-3 p-2 rounded hover-effect">
+                                    <i class="bi bi-box-seam text-primary me-3 fs-5"></i>
+                                    <div class="w-100">
+                                        <strong class="d-block text-muted small">Material</strong>
+                                        <input type="text" name="material" class="form-control" value="{{ $portao->material }}" required>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row mt-4">
-                        <div class="col-12">
-                            <div class="border-top pt-4">
-                                <strong class="text-muted small d-block mb-2">Descrição</strong>
-                                <textarea name="descricao" class="form-control" rows="3" required>{{ $portao->descricao }}</textarea>
+                        <div class="row mt-4">
+                            <div class="col-12">
+                                <div class="border-top pt-4">
+                                    <strong class="text-muted small d-block mb-2">Descrição</strong>
+                                    <textarea name="descricao" class="form-control" rows="3" required>{{ $portao->descricao }}</textarea>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                        <div class="mt-4 text-end">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="bi bi-check-circle me-1"></i> Atualizar Portão
+                            </button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
-</div>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    var imageModal = document.getElementById('imageModal');
-    imageModal.addEventListener('show.bs.modal', function(event) {
-        var button = event.relatedTarget;
-        var imageUrl = button.getAttribute('data-bs-image');
-        var imageTitle = button.getAttribute('data-bs-title');
-        
-        var modalImage = document.getElementById('modalImage');
-        var modalTitle = document.getElementById('imageModalLabel');
-        
-        modalImage.src = imageUrl;
-        modalTitle.textContent = imageTitle;
-    });
-});
-</script>
+<script src="/js/function-modPortao.js"></script>
 @endsection

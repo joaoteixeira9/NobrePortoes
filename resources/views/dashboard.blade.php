@@ -13,7 +13,7 @@
         </div>
     </section>
 
-    <section class="row">
+    <section class="row g-4 d-flex align-items-stretch">
         <div class="col-xl-4 col-md-6 mb-4">
             <div class="card border-0 shadow-sm h-100">
                 <div class="card-header bg-success text-white">
@@ -53,13 +53,33 @@
                             <a href="/modificar-portao/{{ $portao->id }}" class="btn btn-sm btn-outline-warning">
                                 <i class="bi bi-pencil me-1"></i>Modificar
                             </a>
-                            <form action="/deletar-portao/{{ $portao->id }}" method="POST" onsubmit="return confirm('Tem certeza que deseja excluir este portão?')">
-                                @csrf
-                                @method('DELETE')
-                                <button type="submit" class="btn btn-sm btn-outline-danger">
-                                    <i class="bi bi-trash me-1"></i>Deletar
-                                </button>
-                            </form>
+                            <button type="button" class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#confirmDeleteModal{{ $portao->id }}">
+                                <i class="bi bi-trash me-1"></i>Deletar
+                            </button>
+
+                            <div class="modal fade" id="confirmDeleteModal{{ $portao->id }}" tabindex="-1" aria-labelledby="confirmDeleteLabel{{ $portao->id }}" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content border-0 shadow">
+                                    <div class="modal-header bg-danger text-white">
+                                        <h5 class="modal-title" id="confirmDeleteLabel{{ $portao->id }}">Confirmar exclusão</h5>
+                                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        Tem certeza que deseja excluir este portão? Essa ação não pode ser desfeita.
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                        <form action="/deletar-portao/{{ $portao->id }}" method="POST" class="d-inline">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="btn btn-danger">
+                                            <i class="bi bi-trash"></i> Confirmar exclusão
+                                        </button>
+                                        </form>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
