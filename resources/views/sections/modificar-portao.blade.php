@@ -140,7 +140,7 @@
                             <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body p-0 text-center bg-dark">
-                            <img id="modalImage" src="" class="img-fluid" style="max-height: 70vh; object-fit: contain;" alt="">
+                            <img id="modalImage" src="" class="img-fluid" style="max-height: 70vh; object-fit: contain;">
                         </div>
                         <div class="modal-footer bg-dark border-0">
                             <small class="text-white-50">Clique fora da imagem para fechar</small>
@@ -219,5 +219,5 @@
             </div>
         </div>
     </div>
-<script src="/js/function-modPortao.js"></script>
+<script src="/js/function-Portao.js"></script>
 @endsection

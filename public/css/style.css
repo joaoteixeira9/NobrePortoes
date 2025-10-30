@@ -171,3 +171,22 @@ footer {
   background-color: var(--primary-color);
   border-color: var(--primary-color);
 }
+
+.marca-wrapper {
+    position: relative;
+}
+
+.marca-wrapper .marca-dagua {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 520px;
+    height: 520px;
+    background-image: url('/img/LogotipoSerralheria.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+    background-position: center;
+    pointer-events: none;
+}

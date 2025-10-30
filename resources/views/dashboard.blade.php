@@ -33,13 +33,14 @@
         @foreach($portoes as $portao)
             <div class="col-xl-4 col-md-6 mb-4">
                 <div class="card border-0 shadow-sm h-100">
-                    @if($portao->fotos_entrega && count($portao->fotos_entrega) > 0)
-                        <div class="text-center p-2 border-bottom">
+                   @if($portao->fotos_entrega && count($portao->fotos_entrega) > 0)
+                        <div class="marca-wrapper text-center p-2 border-bottom">
                             <img src="{{ asset('uploads/entrega/' . $portao->fotos_entrega[0]) }}" alt="Foto entrega" class="img-fluid rounded" style="max-height: 220px; min-height: 220px; width: auto;">
+                            <div class="marca-dagua"></div>
                         </div>
-                    @endif
+                    @endif 
                     <div class="card-header bg-white text-primary">
-                        <h6 class="mb-0">#PG-{{ str_pad($portao->id, 3, '0', STR_PAD_LEFT) }} - {{ $portao->tipo }}</h6>
+                        <h6 class="mb-0 text-uppercase">#PG-{{ str_pad($portao->id, 3, '0', STR_PAD_LEFT) }} - {{ $portao->tipo }}</h6>
                     </div>
                     <div class="card-body">
                         <div class="mb-3">

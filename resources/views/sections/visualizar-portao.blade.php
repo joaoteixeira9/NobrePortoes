@@ -27,7 +27,7 @@
                         <div class="row g-3">
                             @foreach($portao->fotos_antes as $index => $foto)
                             <div class="col-md-4 col-lg-3">
-                                <div class="card border-0 shadow-sm h-100 transition-all">
+                                <div class="marca-wrapper card border-0 shadow-sm h-100 transition-all">
                                     <img src="{{ asset('uploads/antes/' . $foto) }}" 
                                          class="card-img-top cursor-pointer"
                                          style="height: 200px; object-fit: cover;"
@@ -39,6 +39,7 @@
                                     <div class="card-footer bg-white border-top-0">
                                         <small class="text-muted">Imagem {{ $index + 1 }}</small>
                                     </div>
+                                    <div class="marca-dagua"></div>
                                 </div>
                             </div>
                             @endforeach
@@ -58,7 +59,7 @@
                         <div class="row g-3">
                             @foreach($portao->fotos_producao as $index => $foto)
                             <div class="col-md-4 col-lg-3">
-                                <div class="card border-0 shadow-sm h-100 transition-all">
+                                <div class="marca-wrapper card border-0 shadow-sm h-100 transition-all">
                                     <img src="{{ asset('uploads/producao/' . $foto) }}" 
                                          class="card-img-top cursor-pointer"
                                          style="height: 200px; object-fit: cover;"
@@ -70,6 +71,7 @@
                                     <div class="card-footer bg-white border-top-0">
                                         <small class="text-muted">Imagem {{ $index + 1 }}</small>
                                     </div>
+                                    <div class="marca-dagua"></div>
                                 </div>
                             </div>
                             @endforeach
@@ -89,7 +91,7 @@
                         <div class="row g-3">
                             @foreach($portao->fotos_entrega as $index => $foto)
                             <div class="col-md-4 col-lg-3">
-                                <div class="card border-0 shadow-sm h-100 transition-all">
+                                <div class="marca-wrapper card border-0 shadow-sm h-100 transition-all">
                                     <img src="{{ asset('uploads/entrega/' . $foto) }}" 
                                          class="card-img-top cursor-pointer"
                                          style="height: 200px; object-fit: cover;"
@@ -101,6 +103,7 @@
                                     <div class="card-footer bg-white border-top-0">
                                         <small class="text-muted">Imagem {{ $index + 1 }}</small>
                                     </div>
+                                    <div class="marca-dagua"></div>
                                 </div>
                             </div>
                             @endforeach
@@ -117,8 +120,9 @@
                             <h5 class="modal-title" id="imageModalLabel">Visualização da Imagem</h5>
                             <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <div class="modal-body p-0 text-center bg-dark">
-                            <img id="modalImage" src="" class="img-fluid" style="max-height: 70vh; object-fit: contain;" alt="">
+                        <div class="marca-wrapper modal-body p-0 text-center bg-dark">
+                            <img id="modalImage" src="" class=" img-fluid" style="max-height: 70vh; object-fit: contain;" alt="">
+                            <div class="marca-dagua"></div>
                         </div>
                         <div class="modal-footer bg-dark border-0">
                             <small class="text-white-50">Clique fora da imagem para fechar</small>
@@ -164,20 +168,5 @@
     </div>
 </div>
 
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    var imageModal = document.getElementById('imageModal');
-    imageModal.addEventListener('show.bs.modal', function(event) {
-        var button = event.relatedTarget;
-        var imageUrl = button.getAttribute('data-bs-image');
-        var imageTitle = button.getAttribute('data-bs-title');
-        
-        var modalImage = document.getElementById('modalImage');
-        var modalTitle = document.getElementById('imageModalLabel');
-        
-        modalImage.src = imageUrl;
-        modalTitle.textContent = imageTitle;
-    });
-});
-</script>
+<script src="/js/function-Portao.js"></script>
 @endsection

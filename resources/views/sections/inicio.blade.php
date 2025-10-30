@@ -7,38 +7,38 @@
         </div>
         
         <div class="carousel-inner">
-        <div class="carousel-item active">
-            <img src="https://i.pinimg.com/1200x/c5/f4/1f/c5f41f37f1844636b236f36136784e0b.jpg" class="d-block w-100" alt="Grades">
-            <div class="carousel-caption">
-                <h2 class="fw-bold display-4">Grades e Estruturas</h2>
-                <p class="lead">Proteção com sofisticação e durabilidade para seu patrimônio.</p>
-                <a href="#contato" class="btn btn-success btn-lg text-light mt-3">
-                    <i class="bi bi-whatsapp"></i> Solicite Orçamento
-                </a>
+            <div class="carousel-item active">
+                <img src="/img/aluminio.jpg" class="d-block w-100" alt="Linha aluminio">
+                <div class="carousel-caption">
+                    <h2 class="fw-bold display-4">Linha de Alumínio</h2>
+                    <p class="lead">Leveza, resistência e elegância para portas, portões e estruturas.</p>
+                    <a href="#contato" class="btn btn-success btn-lg text-light mt-3">
+                        <i class="bi bi-whatsapp"></i> Solicite Orçamento
+                    </a>
+                </div>
             </div>
-        </div>
 
-        <div class="carousel-item">
-            <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&h=900&q=80" class="d-block w-100" alt="Grades">
-            <div class="carousel-caption">
-                <h2 class="fw-bold display-4">Grades e Estruturas</h2>
-                <p class="lead">Proteção com sofisticação e durabilidade para seu patrimônio.</p>
-                <a href="#contato" class="btn btn-success btn-lg text-light mt-3">
-                    <i class="bi bi-whatsapp"></i> Solicite Orçamento
-                </a>
+            <div class="carousel-item">
+                <img src="/img/ferro.jpg" class="d-block w-100" alt="Linha ferro">
+                <div class="carousel-caption">
+                    <h2 class="fw-bold display-4">Linha de Ferro</h2>
+                    <p class="lead">Robustez e segurança para portas, portões e estruturas metálicas.</p>
+                    <a href="#contato" class="btn btn-success btn-lg text-light mt-3">
+                        <i class="bi bi-whatsapp"></i> Solicite Orçamento
+                    </a>
+                </div>
             </div>
-        </div>
 
-        <div class="carousel-item">
-            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&h=900&q=80" class="d-block w-100" alt="Portão Automático">
-            <div class="carousel-caption">
-                <h2 class="fw-bold display-4">Automação Residencial</h2>
-                <p class="lead">Tecnologia e segurança para maior comodidade no seu dia a dia.</p>
-                <a href="#contato" class="btn btn-success btn-lg text-light mt-3">
-                    <i class="bi bi-whatsapp"></i> Solicite Orçamento
-                </a>
+           <div class="carousel-item">
+                <img src="/img/reforma.jpg" class="d-block w-100" alt="Manutenção de portões">
+                <div class="carousel-caption">
+                    <h2 class="fw-bold display-4">Manutenção de Portões</h2>
+                    <p class="lead">Garantia de funcionamento e segurança para seu portão em qualquer situação.</p>
+                    <a href="#contato" class="btn btn-success btn-lg text-light mt-3">
+                        <i class="bi bi-whatsapp"></i> Solicite Manutenção
+                    </a>
+                </div>
             </div>
-        </div>
         </div>
 
         <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
