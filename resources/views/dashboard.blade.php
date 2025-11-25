@@ -19,13 +19,16 @@
                 <div class="card-header bg-success text-white">
                     <h6 class="mb-0">Cadastrar Novo Portão</h6>
                 </div>
-                <div class="card-body d-flex flex-column justify-content-center text-center">
+                <div class="flex-grow-1 d-flex justify-content-center align-items-center">
+                    <i class="bi bi-plus-circle text-success fs-1"></i>
+                </div>
+                <div class="card-body d-flex flex-column text-center">
                     <p class="text-muted mb-3">
                         Adicione um novo portão ao sistema.
                     </p>
-                    <a href="/cadastrar-portao" class="btn btn-success">
-                        <i class="bi bi-plus-circle me-1"></i> Cadastrar Portão
-                    </a>
+                    <div class="mt-auto">
+                        <a href="/cadastrar-portao" class="btn btn-success w-100">Cadastrar Portão</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -35,7 +38,7 @@
                 <div class="card border-0 shadow-sm h-100">
                    @if($portao->fotos_entrega && count($portao->fotos_entrega) > 0)
                         <div class="marca-wrapper text-center p-2 border-bottom">
-                            <img src="{{ asset('uploads/entrega/' . $portao->fotos_entrega[0]) }}" alt="Foto entrega" class="img-fluid rounded" style="max-height: 220px; min-height: 220px; width: auto;">
+                            <img src="{{ asset('uploads/entrega/' . $portao->fotos_entrega[0]) }}" alt="Foto entrega" class="img-dashboard img-fluid rounded">
                             <div class="marca-dagua"></div>
                         </div>
                     @endif 

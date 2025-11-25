@@ -29,7 +29,7 @@
                             @foreach($portao->fotos_antes as $index => $foto)
                             <div class="col-md-4 col-lg-3">
                                 <div class="card border-0 shadow-sm h-100 transition-all">
-                                    <img src="{{ asset('uploads/antes/' . $foto) }}" class="card-img-top cursor-pointer" style="height: 200px; object-fit: cover;" alt="Foto Antes" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="{{ asset('uploads/antes/' . $foto) }}" data-bs-title="Antes - Imagem {{ $index + 1 }}">
+                                    <img src="{{ asset('uploads/antes/' . $foto) }}" class="img-card card-img-top cursor-pointer" alt="Foto Antes" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="{{ asset('uploads/antes/' . $foto) }}" data-bs-title="Antes - Imagem {{ $index + 1 }}">
                                     <div class="card-footer bg-white border-top-0">
                                         <div class="d-flex justify-content-between align-items-center">
                                             <small class="text-muted">Imagem {{ $index + 1 }}</small>
@@ -68,7 +68,7 @@
                             @foreach($portao->fotos_producao as $index => $foto)
                             <div class="col-md-4 col-lg-3">
                                 <div class="card border-0 shadow-sm h-100 transition-all">
-                                    <img src="{{ asset('uploads/producao/' . $foto) }}" class="card-img-top cursor-pointer" style="height: 200px; object-fit: cover;" alt="Foto Produção" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="{{ asset('uploads/producao/' . $foto) }}" data-bs-title="Produção - Imagem {{ $index + 1 }}">
+                                    <img src="{{ asset('uploads/producao/' . $foto) }}" class="img-card card-img-top cursor-pointer" alt="Foto Produção" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="{{ asset('uploads/producao/' . $foto) }}" data-bs-title="Produção - Imagem {{ $index + 1 }}">
                                     <div class="card-footer bg-white border-top-0">
                                         <div class="d-flex justify-content-between align-items-center">
                                             <small class="text-muted">Imagem {{ $index + 1 }}</small>
@@ -107,7 +107,7 @@
                             @foreach($portao->fotos_entrega as $index => $foto)
                             <div class="col-md-4 col-lg-3">
                                 <div class="card border-0 shadow-sm h-100 transition-all">
-                                    <img src="{{ asset('uploads/entrega/' . $foto) }}" class="card-img-top cursor-pointer" style="height: 200px; object-fit: cover;" alt="Foto Entrega" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="{{ asset('uploads/entrega/' . $foto) }}" data-bs-title="Entrega - Imagem {{ $index + 1 }}">
+                                    <img src="{{ asset('uploads/entrega/' . $foto) }}" class="img-card card-img-top cursor-pointer" alt="Foto Entrega" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="{{ asset('uploads/entrega/' . $foto) }}" data-bs-title="Entrega - Imagem {{ $index + 1 }}">
                                     <div class="card-footer bg-white border-top-0">
                                         <div class="d-flex justify-content-between align-items-center">
                                             <small class="text-muted">Imagem {{ $index + 1 }}</small>
@@ -140,7 +140,7 @@
                             <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body p-0 text-center bg-dark">
-                            <img id="modalImage" src="" class="img-fluid" style="max-height: 70vh; object-fit: contain;">
+                            <img id="modalImage" src="" class="img-foco img-fluid">
                         </div>
                         <div class="modal-footer bg-dark border-0">
                             <small class="text-white-50">Clique fora da imagem para fechar</small>

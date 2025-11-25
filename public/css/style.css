@@ -9,6 +9,11 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+.dropdown {
+    position: relative; 
+    z-index: 1050;
+}
     
 .navbar {
     background-color: var(--primary-color) !important;
@@ -89,6 +94,16 @@ body {
     background-color: #142c44;
     border-color: #142c44;
 }
+
+.btn-outline-primary{
+    border: solid 1px var(--primary-color) !important;
+    color: var(--primary-color) !important;
+}
+
+.btn-outline-primary:hover{
+    background-color: var(--primary-color) !important;
+    color: var(--light-color) !important;
+}
     
 footer {
     background-color: var(--dark-color);
@@ -109,6 +124,8 @@ footer {
     align-items: center;
     justify-content: center;
     z-index: 1000;
+    bottom:20px; 
+    right:20px;
 }
     
 .top-bar {
@@ -189,4 +206,27 @@ footer {
     opacity: 0.5;
     background-position: center;
     pointer-events: none;
+}
+
+.img-portao {
+    max-height: 220px; 
+    min-height: 220px; 
+    width: 100%; 
+    object-fit: cover;
+}
+
+.img-card {
+    height: 200px; 
+    object-fit: cover;
+}
+
+.img-foco {
+    max-height: 70vh; 
+    object-fit: contain;
+}
+
+.img-dashboard {
+    max-height: 250px;
+    min-height: 250px;
+    width: 100vw;
 }

@@ -3,8 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PortaoController;
 
-Route::get('/', function () {return view('home');});
+Route::get('/', [PortaoController::class, 'home']);
 Route::get('/visualizar-portao/{id}', [PortaoController::class, 'show']);
+Route::get('/portoes', [PortaoController::class, 'search']);
 Route::middleware(['auth'])->group(function () {
     Route::get('/cadastrar-portao', [PortaoController::class, 'create']);
     Route::post('/portoes', [PortaoController::class, 'store']);

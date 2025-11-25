@@ -8,6 +8,11 @@ use Illuminate\Http\Request;
 
 class PortaoController extends Controller
 {
+    public function home(){
+        $portoes = Portao::all();
+        return view('home', ['portoes' => $portoes]);
+    }
+
     public function create()
     {
         return view('sections.cadastrar-portao');

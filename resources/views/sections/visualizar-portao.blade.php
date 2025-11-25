@@ -5,8 +5,8 @@
     <div class="row justify-content-center">
         <div class="col-lg-10">
             <div class="mb-4">
-                <a href="/dashboard" class="btn btn-outline-dark">
-                    <i class="bi bi-arrow-left me-1"></i>Voltar para Dashboard
+                <a href="#" onclick="window.history.back(); return false;" class="btn btn-outline-dark">
+                    <i class="bi bi-arrow-left me-1"></i>Voltar
                 </a>
             </div>
 
@@ -28,14 +28,7 @@
                             @foreach($portao->fotos_antes as $index => $foto)
                             <div class="col-md-4 col-lg-3">
                                 <div class="marca-wrapper card border-0 shadow-sm h-100 transition-all">
-                                    <img src="{{ asset('uploads/antes/' . $foto) }}" 
-                                         class="card-img-top cursor-pointer"
-                                         style="height: 200px; object-fit: cover;"
-                                         alt="Foto Antes"
-                                         data-bs-toggle="modal" 
-                                         data-bs-target="#imageModal"
-                                         data-bs-image="{{ asset('uploads/antes/' . $foto) }}"
-                                         data-bs-title="Antes - Imagem {{ $index + 1 }}">
+                                    <img src="{{ asset('uploads/antes/' . $foto) }}" class="card-img-top cursor-pointer" style="height: 200px; object-fit: cover;" alt="Foto Antes" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="{{ asset('uploads/antes/' . $foto) }}" data-bs-title="Antes - Imagem {{ $index + 1 }}">
                                     <div class="card-footer bg-white border-top-0">
                                         <small class="text-muted">Imagem {{ $index + 1 }}</small>
                                     </div>
@@ -60,14 +53,7 @@
                             @foreach($portao->fotos_producao as $index => $foto)
                             <div class="col-md-4 col-lg-3">
                                 <div class="marca-wrapper card border-0 shadow-sm h-100 transition-all">
-                                    <img src="{{ asset('uploads/producao/' . $foto) }}" 
-                                         class="card-img-top cursor-pointer"
-                                         style="height: 200px; object-fit: cover;"
-                                         alt="Foto Produção"
-                                         data-bs-toggle="modal" 
-                                         data-bs-target="#imageModal"
-                                         data-bs-image="{{ asset('uploads/producao/' . $foto) }}"
-                                         data-bs-title="Produção - Imagem {{ $index + 1 }}">
+                                    <img src="{{ asset('uploads/producao/' . $foto) }}" class="card-img-top cursor-pointer" style="height: 200px; object-fit: cover;" alt="Foto Produção" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="{{ asset('uploads/producao/' . $foto) }}" data-bs-title="Produção - Imagem {{ $index + 1 }}">
                                     <div class="card-footer bg-white border-top-0">
                                         <small class="text-muted">Imagem {{ $index + 1 }}</small>
                                     </div>
@@ -92,14 +78,7 @@
                             @foreach($portao->fotos_entrega as $index => $foto)
                             <div class="col-md-4 col-lg-3">
                                 <div class="marca-wrapper card border-0 shadow-sm h-100 transition-all">
-                                    <img src="{{ asset('uploads/entrega/' . $foto) }}" 
-                                         class="card-img-top cursor-pointer"
-                                         style="height: 200px; object-fit: cover;"
-                                         alt="Foto Entrega"
-                                         data-bs-toggle="modal" 
-                                         data-bs-target="#imageModal"
-                                         data-bs-image="{{ asset('uploads/entrega/' . $foto) }}"
-                                         data-bs-title="Entrega - Imagem {{ $index + 1 }}">
+                                    <img src="{{ asset('uploads/entrega/' . $foto) }}" class="card-img-top cursor-pointer" style="height: 200px; object-fit: cover;" alt="Foto Entrega" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="{{ asset('uploads/entrega/' . $foto) }}" data-bs-title="Entrega - Imagem {{ $index + 1 }}">
                                     <div class="card-footer bg-white border-top-0">
                                         <small class="text-muted">Imagem {{ $index + 1 }}</small>
                                     </div>

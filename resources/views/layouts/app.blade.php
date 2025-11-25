@@ -9,20 +9,20 @@
     <link rel="stylesheet" href="/css/style.css">
     <link rel="shortcut icon" href="/img/LogotipoSerralheria.ico " type="image/x-icon">
 </head>
-<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="80" tabindex="0">
+<body>
     <div class="top-bar text-light bg-dark py-2">
         <div class="container">
             <div class="d-flex justify-content-between align-items-center">
                 <span class="ms-3"><i class="bi bi-clock me-2"></i>Seg - Sex: 8h às 18h | Sáb: 8h às 12h</span>
                 @if(Auth::check())
-                    <div class="ms-3 dropdown" style="position: relative; z-index: 1050;">
+                    <div class="ms-3 dropdown">
                         <a class="d-flex align-items-center text-decoration-none" href="#" role="button" id="userMenu" data-bs-toggle="dropdown" aria-expanded="false">
                             <div class="bg-white text-dark px-2 py-1 rounded shadow-sm d-flex justify-content-center align-items-center">
                                 <p class="mb-0 text-center text-uppercase fw-bold">{{ Auth::user()->name }}</p>
                             </div>
                         </a>
 
-                        <ul class="dropdown-menu dropdown-menu-end shadow-lg rounded-3 mt-2" aria-labelledby="userMenu" style="min-width: 180px;">
+                        <ul class="dropdown-menu dropdown-menu-end shadow-lg rounded-3 mt-2" aria-labelledby="userMenu">
                             <li>
                                 <a class="dropdown-item d-flex align-items-center" href="/dashboard">
                                     <p class="text-dark">Painel</p>
@@ -71,6 +71,7 @@
 
                 <form class="d-flex ms-3" role="search">
                     <input class="form-control form-control-sm me-2" type="search" placeholder="Pesquisar..." aria-label="Pesquisar">
+                    form
                     <button class="btn btn-sm btn-outline-light" type="submit"><i class="bi bi-search"></i></button>
                 </form>
             </div>
@@ -82,9 +83,7 @@
         @yield('content')
     </main>
     
-    <a href="https://wa.me/5519999999999" target="_blank" 
-        class="btn btn-success text-light rounded-circle shadow position-fixed whatsapp-float" 
-        style="bottom:20px; right:20px;">
+    <a href="https://wa.me/5519999999999" target="_blank" class="btn btn-success text-light rounded-circle shadow position-fixed whatsapp-float"> 
         <i class="bi bi-whatsapp fs-3"></i>
     </a>
 
