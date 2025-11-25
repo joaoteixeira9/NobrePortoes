@@ -8,8 +8,14 @@ use Illuminate\Http\Request;
 
 class PortaoController extends Controller
 {
-    public function home(){
-        $portoes = Portao::all();
+    public function home(Request $request){
+        $query = Portao::query();
+
+        if ($request->has('categoria') && $request->categoria != '') {
+            $query->where('categoria', $request->categoria);
+        }
+        $portoes = $query->get();
+
         return view('home', ['portoes' => $portoes]);
     }
 
@@ -173,12 +179,23 @@ class PortaoController extends Controller
     public function search(Request $request)
     {
         $search = $request->input("search");
+        $categoria = $request->input('categoria');
 
-        $portoes = Portao::when($search, function ($query, $search) {
-            return $query->where('tipo', 'LIKE', "%{$search}%");
-        })
-        ->orderBy('tipo')
-        ->get();
+        $query = Portao::query();
+
+        if ($search) {
+            $query->where(function($q) use ($search) {
+                $q->where('tipo', 'like', "%{$search}%")
+                ->orWhere('material', 'like', "%{$search}%")
+                ->orWhere('categoria', 'like', "%{$search}%");
+            });
+        }
+
+        if ($categoria) {
+            $query->where('categoria', $categoria);
+        }
+
+        $portoes = $query->get();
 
         return view('sections.procurar-portoes', ["portoes" => $portoes, "search" => $search]);
     }

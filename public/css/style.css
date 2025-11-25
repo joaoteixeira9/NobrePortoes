@@ -226,7 +226,13 @@ footer {
 }
 
 .img-dashboard {
-    max-height: 250px;
-    min-height: 250px;
-    width: 100vw;
+    height: 200px;
+}
+
+.btn-outline-primary.active {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--light-color) !important;
+    transform: scale(1.05);
+    transition: all 0.3s ease;
 }
