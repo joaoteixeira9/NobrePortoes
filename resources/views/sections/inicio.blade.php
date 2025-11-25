@@ -10,10 +10,10 @@
             <div class="carousel-item active">
                 <img src="/img/aluminio.jpg" class="d-block w-100" alt="Linha aluminio">
                 <div class="carousel-caption">
-                    <h2 class="fw-bold display-4">Linha de Alumínio</h2>
+                    <h2 class="fw-bold display-4">Linha de alumínio</h2>
                     <p class="lead">Leveza, resistência e elegância para portas, portões e estruturas.</p>
                     <a href="#contato" class="btn btn-success btn-lg text-light mt-3">
-                        <i class="bi bi-whatsapp"></i> Solicite Orçamento
+                        <i class="bi bi-whatsapp"></i> Solicite orçamento
                     </a>
                 </div>
             </div>
@@ -21,10 +21,10 @@
             <div class="carousel-item">
                 <img src="/img/ferro.jpg" class="d-block w-100" alt="Linha ferro">
                 <div class="carousel-caption">
-                    <h2 class="fw-bold display-4">Linha de Ferro</h2>
+                    <h2 class="fw-bold display-4">Linha de ferro</h2>
                     <p class="lead">Robustez e segurança para portas, portões e estruturas metálicas.</p>
                     <a href="#contato" class="btn btn-success btn-lg text-light mt-3">
-                        <i class="bi bi-whatsapp"></i> Solicite Orçamento
+                        <i class="bi bi-whatsapp"></i> Solicite orçamento
                     </a>
                 </div>
             </div>
@@ -32,10 +32,10 @@
            <div class="carousel-item">
                 <img src="/img/reforma.jpg" class="d-block w-100" alt="Manutenção de portões">
                 <div class="carousel-caption">
-                    <h2 class="fw-bold display-4">Manutenção de Portões</h2>
+                    <h2 class="fw-bold display-4">Manutenção de portões</h2>
                     <p class="lead">Garantia de funcionamento e segurança para seu portão em qualquer situação.</p>
                     <a href="#contato" class="btn btn-success btn-lg text-light mt-3">
-                        <i class="bi bi-whatsapp"></i> Solicite Manutenção
+                        <i class="bi bi-whatsapp"></i> Solicite manutenção
                     </a>
                 </div>
             </div>
@@ -49,9 +49,9 @@
         </button>
     </div>
 
-    <section class="py-5 bg-light box" id="inicio">
+    <section class="py-5 bg-light box">
         <div class="container">
-        <h2 class="text-center">Nossos Projetos</h2>
+        <h2 class="text-center">Nossos projetos</h2>
         <p class="text-center mb-5">Confira alguns dos nossos trabalhos realizados para clientes residenciais e comerciais.</p>
         <div class="row g-4">
             @foreach($portoes as $portao)
@@ -69,11 +69,11 @@
                     <div class="card-body">
                         <div class="mb-3">
                             <strong>Material:</strong> {{ $portao->material }}<br>
-                            <strong>Descrição:</strong> {{ $portao->descricao }}
+                            <strong>Descrição:</strong> {{ Str::limit($portao->descricao, 25) }}
                         </div>
                         <div class="d-flex gap-2 flex-wrap">
                             <a href="/visualizar-portao/{{ $portao->id }}" class="btn btn-sm btn-outline-primary w-100">
-                                <i class="bi bi-eye me-1"></i>Visualizar
+                                <i class="bi bi-eye me-1"></i>Ver detalhes
                             </a>
                         </div>
                     </div>

@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="/css/style.css">
     <link rel="shortcut icon" href="/img/LogotipoSerralheria.ico " type="image/x-icon">
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
     <div class="top-bar text-light bg-dark py-2">
         <div class="container">
             <div class="d-flex justify-content-between align-items-center">
@@ -64,14 +64,13 @@
 
             <div class="collapse navbar-collapse w-75" id="menu">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/#servicos">Serviços</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/#sobre">Sobre</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/#contato">Contato</a></li>
                 </ul>
 
-                <form class="d-flex ms-3" role="search">
-                    <input class="form-control form-control-sm me-2" type="search" placeholder="Pesquisar..." aria-label="Pesquisar">
-                    form
+                <form action="/procurar-portoes" method="GET" class="d-flex" role="search">
+                    <input class="form-control form-control-sm me-2" value="{{ request('search') }}" type="search" name="search" placeholder="Pesquisar..." aria-label="Pesquisar">
                     <button class="btn btn-sm btn-outline-light" type="submit"><i class="bi bi-search"></i></button>
                 </form>
             </div>
@@ -87,7 +86,7 @@
         <i class="bi bi-whatsapp fs-3"></i>
     </a>
 
-    <footer class="bg-dark text-light pt-5 pb-3">
+    <footer class="mt-auto bg-dark text-light pt-5 pb-3">
         <div class="container">
             <div class="row">
                 <div class="col-md-4 mb-4">

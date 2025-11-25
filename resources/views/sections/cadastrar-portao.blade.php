@@ -13,13 +13,40 @@
                     <form action="/portoes" method="POST" enctype="multipart/form-data">
                         @csrf
                         <h6 class="fw-bold mb-3 text-secondary border-bottom pb-1">Informações Gerais</h6>
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">Categoria do portão</label>
+                            <select name="categoria" class="form-select" required>
+                                <option value="Basculante">Basculante</option>
+                                <option value="Deslizante">Deslizante</option>
+                                <option value="Pivotante">Pivotante</option>
+                                <option value="Correr">De Correr</option>
+                                <option value="Articulado">Articulado</option>
+                                <option value="Giro">De Giro</option>
+                                <option value="Sanfonado">Sanfonado</option>
+                                <option value="Elevador">Elevador</option>
+                                <option value="Automatizado">Automatizado</option>
+                                <option value="Manual">Manual</option>
+                                <option value="Ferro">Ferro</option>
+                                <option value="Alumínio">Alumínio</option>
+                                <option value="Aço">Aço</option>
+                                <option value="Madeira">Madeira</option>
+                                <option value="Vidro">Vidro</option>
+                                <option value="Comercial">Comercial</option>
+                                <option value="Residencial">Residencial</option>
+                                <option value="Industrial">Industrial</option>
+                                <option value="Reforma">Reforma</option>
+                                <option value="Manutenção">Manutenção</option>
+                                <option value="Instalação">Instalação</option>
+                                <option value="Outros">Outros</option>
+                            </select>
+                        </div>
                         <div class="row">
                             <div class="col-md-6 mb-3">
-                                <label class="form-label fw-bold">Titulo</label>
+                                <label class="form-label fw-bold">Serviço prestado</label>
                                 <input type="text" name="tipo" class="form-control" placeholder="Ex: Reforma basculante" required>
                             </div>
                             <div class="col-md-6 mb-3">
-                                <label class="form-label fw-bold">Material</label>
+                                <label class="form-label fw-bold">Tipo do material</label>
                                 <input type="text" name="material" class="form-control" placeholder="Ex: Alumínio, Ferro..." required>
                             </div>
                         </div>

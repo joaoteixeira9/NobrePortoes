@@ -131,6 +131,13 @@
                                     <span class="fs-6">{{ $portao->material }}</span>
                                 </div>
                             </div>
+                            <div class="d-flex align-items-center mb-3 p-2 rounded hover-effect">
+                                <i class="bi bi-grid text-primary me-3 fs-5"></i>
+                                <div>
+                                    <strong class="d-block text-muted small">Categoria</strong>
+                                    <span class="fs-6">{{ $portao->categoria}}</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="row mt-4">

@@ -12,10 +12,8 @@ class Portao extends Model
     protected $fillable = [
         'tipo',
         'material',
-        'cor',
-        'largura',
-        'altura',
         'descricao',
+        'categoria',
         'fotos_antes',
         'fotos_producao',
         'fotos_entrega',

@@ -48,11 +48,12 @@
                     <div class="card-body">
                         <div class="mb-3">
                             <strong>Material:</strong> {{ $portao->material }}<br>
-                            <strong>Descrição:</strong> {{ $portao->descricao }}
+                            <strong>Categoria:</strong> {{ $portao->categoria }}<br>
+                            <strong>Descrição:</strong> {{ Str::limit($portao->descricao, 25) }}
                         </div>
                         <div class="d-flex gap-2 flex-wrap">
                             <a href="/visualizar-portao/{{ $portao->id }}" class="btn btn-sm btn-outline-primary">
-                                <i class="bi bi-eye me-1"></i>Visualizar
+                                <i class="bi bi-eye me-1"></i>Ver detalhes
                             </a>
                             <a href="/modificar-portao/{{ $portao->id }}" class="btn btn-sm btn-outline-warning">
                                 <i class="bi bi-pencil me-1"></i>Modificar

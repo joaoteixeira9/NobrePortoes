@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('tipo');
             $table->string('material');
             $table->text('descricao');
+            $table->text('categoria');
             $table->json('fotos_antes')->nullable();
             $table->json('fotos_producao')->nullable();
             $table->json('fotos_entrega')->nullable();

@@ -24,6 +24,7 @@ class PortaoController extends Controller
             'tipo' => 'required|string|max:255',
             'material' => 'required|string|max:255',
             'descricao' => 'required|string',
+            "categoria" => 'required|string|max:255',
         ]);
 
         $data['fotos_antes'] = $this->salvarNomesFotos($request->file('fotos_antes'), 'antes');
@@ -167,5 +168,18 @@ class PortaoController extends Controller
         $portao->update($data);
 
         return redirect('dashboard');
+    }
+
+    public function search(Request $request)
+    {
+        $search = $request->input("search");
+
+        $portoes = Portao::when($search, function ($query, $search) {
+            return $query->where('tipo', 'LIKE', "%{$search}%");
+        })
+        ->orderBy('tipo')
+        ->get();
+
+        return view('sections.procurar-portoes', ["portoes" => $portoes, "search" => $search]);
     }
 }
