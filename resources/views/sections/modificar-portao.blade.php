@@ -15,7 +15,6 @@
                     <h4 class="mb-0 text-primary">#PG-{{ str_pad($portao->id, 3, '0', STR_PAD_LEFT) }} - {{ $portao->tipo }}</h4>
                 </div>
                 <div class="card-body">
-                    @if($portao->fotos_antes && count($portao->fotos_antes) > 0)
                     <div class="mb-5">
                         <div class="d-flex align-items-center mb-3 p-3 bg-light rounded">
                             <i class="bi bi-clock-history text-primary fs-4 me-3"></i>
@@ -25,6 +24,7 @@
                             </div>
                             <button type="button" class="btn btn-primary btn-sm ms-auto" data-bs-toggle="modal" data-bs-target="#addFotosModal" data-categoria="fotos_antes"><i class="bi bi-plus"></i> Adicionar Fotos</button>
                         </div>
+                        @if($portao->fotos_antes && count($portao->fotos_antes) > 0)
                         <div class="row g-3">
                             @foreach($portao->fotos_antes as $index => $foto)
                             <div class="col-md-4 col-lg-3">
@@ -52,7 +52,6 @@
                     </div>
                     @endif
 
-                    @if($portao->fotos_producao && count($portao->fotos_producao) > 0)
                     <div class="mb-5">
                         <div class="d-flex align-items-center mb-3 p-3 bg-light rounded">
                             <i class="bi bi-gear text-warning fs-4 me-3"></i>
@@ -64,6 +63,7 @@
                                 <i class="bi bi-plus"></i> Adicionar Fotos
                             </button>
                         </div>
+                        @if($portao->fotos_producao && count($portao->fotos_producao) > 0)
                         <div class="row g-3">
                             @foreach($portao->fotos_producao as $index => $foto)
                             <div class="col-md-4 col-lg-3">
@@ -91,7 +91,6 @@
                     </div>
                     @endif
 
-                    @if($portao->fotos_entrega && count($portao->fotos_entrega) > 0)
                     <div class="mb-5">
                         <div class="d-flex align-items-center mb-3 p-3 bg-light rounded">
                             <i class="bi bi-check-circle text-success fs-4 me-3"></i>
@@ -103,6 +102,7 @@
                                 <i class="bi bi-plus"></i> Adicionar Fotos
                             </button>
                         </div>
+                        @if($portao->fotos_entrega && count($portao->fotos_entrega) > 0)
                         <div class="row g-3">
                             @foreach($portao->fotos_entrega as $index => $foto)
                             <div class="col-md-4 col-lg-3">

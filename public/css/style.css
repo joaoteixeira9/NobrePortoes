@@ -236,3 +236,10 @@ footer {
     transform: scale(1.05);
     transition: all 0.3s ease;
 }
+
+.carousel-caption {
+    top: 10px;
+    left: 10%;
+    right: 10%;
+    text-align: left;
+}

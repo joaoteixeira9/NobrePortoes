@@ -13,7 +13,7 @@
     <div class="top-bar text-light bg-dark py-2">
         <div class="container">
             <div class="d-flex justify-content-between align-items-center">
-                <span class="ms-3"><i class="bi bi-clock me-2"></i>Seg - Sex: 8h às 18h | Sáb: 8h às 12h</span>
+                <span class="ms-3">Seg - Sex: 8h às 18h <br> Sáb: 8h às 12h</span>
                 @if(Auth::check())
                     <div class="ms-3 dropdown">
                         <a class="d-flex align-items-center text-decoration-none" href="#" role="button" id="userMenu" data-bs-toggle="dropdown" aria-expanded="false">
@@ -122,7 +122,6 @@
                 <h5 class="fw-bold">Horário de Atendimento</h5>
                 <p><i class="bi bi-clock me-2"></i> Seg - Sex: 8h às 18h</p>
                 <p><i class="bi bi-clock me-2"></i> Sáb: 8h às 12h</p>
-                <p class="mt-3">Atendimento emergencial 24h para manutenção.</p>
                 </div>
 
             </div>

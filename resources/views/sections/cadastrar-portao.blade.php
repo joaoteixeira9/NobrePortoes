@@ -26,7 +26,7 @@
                                 <option value="Elevador">Elevador</option>
                                 <option value="Automatizado">Automatizado</option>
                                 <option value="Manual">Manual</option>
-                                <option value="Ferro">Ferro</option>
+                                <option value="Aço carbono(Ferro)">Aço carbono(Ferro)</option>
                                 <option value="Alumínio">Alumínio</option>
                                 <option value="Aço">Aço</option>
                                 <option value="Madeira">Madeira</option>
@@ -37,6 +37,11 @@
                                 <option value="Reforma">Reforma</option>
                                 <option value="Manutenção">Manutenção</option>
                                 <option value="Instalação">Instalação</option>
+                                <option value="Bate pneu">Bate pneu</option>
+                                <option value="Mezaninos">Mezaninos</option>
+                                <option value="Calhas e telhados">Calhas e telhados</option>
+                                <option value="Portas Automática de enrolar">Portas automática de enrolar</option>
+                                <option value="Escadas">Escadas</option>
                                 <option value="Outros">Outros</option>
                             </select>
                         </div>
