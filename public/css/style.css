@@ -46,9 +46,8 @@ body {
 }
     
 .carousel-caption {
-    bottom: 30%;
-    background: rgba(0,0,0,0.6);
-    padding: 2rem;
+    bottom: 20%;
+    padding: 1rem;
     border-radius: 10px;
 }
     
@@ -235,11 +234,4 @@ footer {
     color: var(--light-color) !important;
     transform: scale(1.05);
     transition: all 0.3s ease;
-}
-
-.carousel-caption {
-    top: 10px;
-    left: 10%;
-    right: 10%;
-    text-align: left;
 }

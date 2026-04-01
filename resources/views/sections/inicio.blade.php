@@ -100,11 +100,12 @@
                 <div class="col-xl-4 col-md-6">
                     <div class="card border-0 shadow-sm h-100 transition-all">
                         @if(isset($portao->fotos_entrega) && count($portao->fotos_entrega) > 0)
-                            <div class="position-relative overflow-hidden">
+                            <div class="marca-wrapper position-relative overflow-hidden">
                                 <img src="{{ asset('uploads/entrega/' . $portao->fotos_entrega[0]) }}" alt="Foto entrega" class="img-dashboard card-img-top object-fit-cover">
                                 <div class="position-absolute top-0 end-0 m-3">
                                     <span class="badge bg-primary bg-opacity-90">{{ $portao->categoria }}</span>
                                 </div>
+                                <div class="marca-dagua"></div>
                             </div>
                         @endif
 
