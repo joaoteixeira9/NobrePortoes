@@ -94,7 +94,7 @@
                 <p>Excelência em portões automáticos, grades e estruturas metálicas há mais de 15 anos no mercado.</p>
                 <div class="social-icons">
                     <a href="#" class="text-light me-3"><i class="bi bi-facebook fs-4"></i></a>
-                    <a href="#" class="text-light me-3"><i class="bi bi-instagram fs-4"></i></a>
+                    <a href="https://www.instagram.com/nobremetalserralheria?utm_source=qr&igsh=MXQzcTU5Y3F0M3c1NQ==" class="text-light me-3"><i class="bi bi-instagram fs-4"></i></a>
                     <a href="#" class="text-light"><i class="bi bi-whatsapp fs-4"></i></a>
                 </div>
                 </div>

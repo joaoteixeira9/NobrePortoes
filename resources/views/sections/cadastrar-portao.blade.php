@@ -21,9 +21,6 @@
                                 <option value="Pivotante">Pivotante</option>
                                 <option value="Correr">De Correr</option>
                                 <option value="Articulado">Articulado</option>
-                                <option value="Giro">De Giro</option>
-                                <option value="Sanfonado">Sanfonado</option>
-                                <option value="Elevador">Elevador</option>
                                 <option value="Automatizado">Automatizado</option>
                                 <option value="Manual">Manual</option>
                                 <option value="Aço carbono(Ferro)">Aço carbono(Ferro)</option>

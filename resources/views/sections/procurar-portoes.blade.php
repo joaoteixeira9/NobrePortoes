@@ -33,9 +33,6 @@
                                         <option value="Pivotante" {{ request('categoria') == 'Pivotante' ? 'selected' : '' }}>Pivotante</option>
                                         <option value="Correr" {{ request('categoria') == 'Correr' ? 'selected' : '' }}>De Correr</option>
                                         <option value="Articulado" {{ request('categoria') == 'Articulado' ? 'selected' : '' }}>Articulado</option>
-                                        <option value="Giro" {{ request('categoria') == 'Giro' ? 'selected' : '' }}>De Giro</option>
-                                        <option value="Sanfonado" {{ request('categoria') == 'Sanfonado' ? 'selected' : '' }}>Sanfonado</option>
-                                        <option value="Elevador" {{ request('categoria') == 'Elevador' ? 'selected' : '' }}>Elevador</option>
                                         <option value="Automatizado" {{ request('categoria') == 'Automatizado' ? 'selected' : '' }}>Automatizado</option>
                                         <option value="Manual" {{ request('categoria') == 'Manual' ? 'selected' : '' }}>Manual</option>
                                         <option value="Ferro" {{ request('categoria') == 'Ferro' ? 'selected' : '' }}>Ferro</option>

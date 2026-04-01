@@ -69,9 +69,6 @@
                     <a href="?categoria=Pivotante#projetos" class="btn btn-outline-primary {{ request('categoria') == 'Pivotante' ? 'active' : '' }}">Pivotante</a>
                     <a href="?categoria=Correr#projetos" class="btn btn-outline-primary {{ request('categoria') == 'Correr' ? 'active' : '' }}">De Correr</a>
                     <a href="?categoria=Articulado#projetos" class="btn btn-outline-primary {{ request('categoria') == 'Articulado' ? 'active' : '' }}">Articulado</a>
-                    <a href="?categoria=Giro#projetos" class="btn btn-outline-primary {{ request('categoria') == 'Giro' ? 'active' : '' }}">De Giro</a>
-                    <a href="?categoria=Sanfonado#projetos" class="btn btn-outline-primary {{ request('categoria') == 'Sanfonado' ? 'active' : '' }}">Sanfonado</a>
-                    <a href="?categoria=Elevador#projetos" class="btn btn-outline-primary {{ request('categoria') == 'Elevador' ? 'active' : '' }}">Elevador</a>
                     <a href="?categoria=Automatizado#projetos" class="btn btn-outline-primary {{ request('categoria') == 'Automatizado' ? 'active' : '' }}">Automatizado</a>
                     <a href="?categoria=Manual#projetos" class="btn btn-outline-primary {{ request('categoria') == 'Manual' ? 'active' : '' }}">Manual</a>
                     <a href="?categoria=Ferro#projetos" class="btn btn-outline-primary {{ request('categoria') == 'Ferro' ? 'active' : '' }}">Aço carbono(Ferro)</a>
