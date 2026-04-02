@@ -49,7 +49,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top" id="navbar">
         <div class="container">
             <div class="d-flex justify-content-between align-items-center w-100">
-                <a class="navbar-brand fw-bold" href="/">Nobre Portões</a>
+                <a class="navbar-brand fw-bold" href="/">Nobre Metal</a>
                 
                 <div class="position-absolute start-50 translate-middle-x d-none d-lg-block">
                     <span class="text-white fw-bold fs-5">
@@ -82,7 +82,7 @@
         @yield('content')
     </main>
     
-    <a href="https://wa.me/5519999999999" target="_blank" class="btn btn-success text-light rounded-circle shadow position-fixed whatsapp-float"> 
+    <a href="https://wa.me/5519974221200" target="_blank" class="btn btn-success text-light rounded-circle shadow position-fixed whatsapp-float"> 
         <i class="bi bi-whatsapp fs-3"></i>
     </a>
 
@@ -90,7 +90,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4 mb-4">
-                <h5 class="fw-bold">Nobre Portões</h5>
+                <h5 class="fw-bold">Nobre Metal Serralheria</h5>
                 <p>Excelência em portões automáticos, grades e estruturas metálicas há mais de 15 anos no mercado.</p>
                 <div class="social-icons">
                     <a href="#" class="text-light me-3"><i class="bi bi-facebook fs-4"></i></a>
@@ -114,7 +114,7 @@
                 <h5 class="fw-bold">Contato</h5>
                 <p><i class="bi bi-telephone me-2"></i> (19) 99999-9999</p>
                 <p><i class="bi bi-whatsapp me-2"></i> (19) 98888-8888</p>
-                <p><i class="bi bi-envelope me-2"></i> contato@nobreportoes.com.br</p>
+                <p><i class="bi bi-envelope me-2"></i> contato@nmserralheria.com.br</p>
                 <p><i class="bi bi-geo-alt me-2"></i> Rua Exemplo, 123 - Americana/SP</p>
                 </div>
 
@@ -126,7 +126,7 @@
 
             </div>
             <hr class="border-light">
-            <p class="text-center mb-0">&copy; 2025 Nobre Portões - Todos os direitos reservados</p>
+            <p class="text-center mb-0">&copy; 2025 Nobre Metal Serralheria - Todos os direitos reservados</p>
         </div>
     </footer>
     <script src="https://unpkg.com/scrollreveal"></script>
