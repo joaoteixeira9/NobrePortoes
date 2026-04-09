@@ -2,11 +2,11 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-md-6 order-2 order-md-1 text-center text-md-start">
-                <h2>Sobre a Nobre Portões</h2>
-                <p class="lead">Há mais de 15 anos no mercado, a Nobre Portões se destaca pela excelência na fabricação, instalação e manutenção de portões automáticos, grades e estruturas metálicas.</p>
+                <h2>Sobre a Nobre Metal Serralheria</h2>
+                <p class="lead">A Nobre Metal Serralheria se destaca pela excelência na fabricação, instalação e manutenção de portões automáticos, grades, mezaninos, escadas, bate-pneus e estruturas metálicas.</p>
                 <p>Nossa missão é oferecer soluções personalizadas que unem segurança, durabilidade e design, sempre com foco na satisfação total do cliente.</p>
                 <p>Nossa equipe é formada por profissionais qualificados e experientes.</p>
-                <a href="/contato" class="btn btn-primary mt-3">Entre em contato</a>
+                <a href="https://wa.me/5519993805758" class="btn btn-primary mt-3">Entre em contato</a>
             </div>
 
             <div class="col-md-6 text-center order-1 order-md-2 mb-4 mb-md-0">

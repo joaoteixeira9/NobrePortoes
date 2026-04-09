@@ -12,7 +12,7 @@
                 <div class="carousel-caption">
                     <h2 class="fw-bold display-4">Linha de alumínio</h2>
                     <p class="lead">Leveza, resistência e elegância para portas, portões e estruturas.</p>
-                    <a href="#contato" class="btn btn-success btn-lg text-light mt-3">
+                    <a href="https://wa.me/5519993805758" class="btn btn-success btn-lg text-light mt-3">
                         <i class="bi bi-whatsapp"></i> Solicite orçamento
                     </a>
                 </div>
@@ -23,7 +23,7 @@
                 <div class="carousel-caption">
                     <h2 class="fw-bold display-4">Linha de ferro</h2>
                     <p class="lead">Robustez e segurança para portas, portões e estruturas metálicas.</p>
-                    <a href="#contato" class="btn btn-success btn-lg text-light mt-3">
+                    <a href="https://wa.me/5519993805758" class="btn btn-success btn-lg text-light mt-3">
                         <i class="bi bi-whatsapp"></i> Solicite orçamento
                     </a>
                 </div>
@@ -34,7 +34,7 @@
                 <div class="carousel-caption">
                     <h2 class="fw-bold display-4">Manutenção de portões</h2>
                     <p class="lead">Garantindo funcionamento, segurança para seu portão em qualquer situação.</p>
-                    <a href="#contato" class="btn btn-success btn-lg text-light mt-3">
+                    <a href="https://wa.me/5519993805758" class="btn btn-success btn-lg text-light mt-3">
                         <i class="bi bi-whatsapp"></i> Solicite orçamento
                     </a>
                 </div>

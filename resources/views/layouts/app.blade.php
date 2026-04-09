@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nobre Portões - Excelência em Portões Automáticos</title>
+    <title>Nobre Metal Serralheria - Excelência em metais.</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
@@ -12,8 +12,14 @@
 <body class="d-flex flex-column min-vh-100">
     <div class="top-bar text-light bg-dark py-2">
         <div class="container">
+            <div class="d-flex justify-content-between ">
+                <span class="ms-3">
+                    Seg - Sex: 8h às 18h | Sáb: 8h às 12h <br>
+                    Rua 13 de maio, 1087 - Santa Bábara D'Oeste <br>
+                    Atendemos em um raio de até 100 km
+                </span>
+            </div>
             <div class="d-flex justify-content-between align-items-center">
-                <span class="ms-3">Seg - Sex: 8h às 18h <br> Sáb: 8h às 12h</span>
                 @if(Auth::check())
                     <div class="ms-3 dropdown">
                         <a class="d-flex align-items-center text-decoration-none" href="#" role="button" id="userMenu" data-bs-toggle="dropdown" aria-expanded="false">
@@ -53,7 +59,7 @@
                 
                 <div class="position-absolute start-50 translate-middle-x d-none d-lg-block">
                     <span class="text-white fw-bold fs-5">
-                        <i class="bi bi-telephone-fill me-2"></i>(19) 99999-9999
+                        <i class="bi bi-telephone-fill me-2"></i>(19) 99380-5758
                     </span>
                 </div>
                 
@@ -82,7 +88,7 @@
         @yield('content')
     </main>
     
-    <a href="https://wa.me/5519974221200" target="_blank" class="btn btn-success text-light rounded-circle shadow position-fixed whatsapp-float"> 
+    <a href="https://wa.me/5519993805758" target="_blank" class="btn btn-success text-light rounded-circle shadow position-fixed whatsapp-float"> 
         <i class="bi bi-whatsapp fs-3"></i>
     </a>
 
@@ -93,9 +99,8 @@
                 <h5 class="fw-bold">Nobre Metal Serralheria</h5>
                 <p>Excelência em portões automáticos, grades e estruturas metálicas há mais de 15 anos no mercado.</p>
                 <div class="social-icons">
-                    <a href="#" class="text-light me-3"><i class="bi bi-facebook fs-4"></i></a>
                     <a href="https://www.instagram.com/nobremetalserralheria?utm_source=qr&igsh=MXQzcTU5Y3F0M3c1NQ==" class="text-light me-3"><i class="bi bi-instagram fs-4"></i></a>
-                    <a href="#" class="text-light"><i class="bi bi-whatsapp fs-4"></i></a>
+                    <a href="https://wa.me/5519993805758" class="text-light"><i class="bi bi-whatsapp fs-4"></i></a>
                 </div>
                 </div>
 
@@ -112,10 +117,9 @@
 
                 <div class="col-md-3 mb-4">
                 <h5 class="fw-bold">Contato</h5>
-                <p><i class="bi bi-telephone me-2"></i> (19) 99999-9999</p>
-                <p><i class="bi bi-whatsapp me-2"></i> (19) 98888-8888</p>
+                <p><i class="bi bi-telephone me-2"></i> (19) 99380-5758</p>
                 <p><i class="bi bi-envelope me-2"></i> contato@nmserralheria.com.br</p>
-                <p><i class="bi bi-geo-alt me-2"></i> Rua Exemplo, 123 - Americana/SP</p>
+                <p><i class="bi bi-geo-alt me-2"></i> Rua 13 de maio, 1087 - Santa Bábara D'Oeste</p>
                 </div>
 
                 <div class="col-md-3 mb-4">
