@@ -16,7 +16,7 @@
                 <span class="ms-3">
                     Seg - Sex: 8h às 18h | Sáb: 8h às 12h <br>
                     Rua 13 de maio, 1087 - Santa Bábara D'Oeste <br>
-                    Atendemos em um raio de até 100 km
+                    Atendemos em um raio de até 150 km
                 </span>
             </div>
             <div class="d-flex justify-content-between align-items-center">
@@ -44,10 +44,6 @@
                             </li>
                         </ul>
                     </div>
-                @else
-                    <a href="/login" class="text-white ms-3">
-                        <i class="bi bi-person-circle me-2"></i>Login
-                    </a>
                 @endif
             </div>
         </div>
@@ -97,7 +93,7 @@
             <div class="row">
                 <div class="col-md-4 mb-4">
                 <h5 class="fw-bold">Nobre Metal Serralheria</h5>
-                <p>Excelência em portões automáticos, grades e estruturas metálicas há mais de 15 anos no mercado.</p>
+                <p>Excelência em portões automáticos, grades e estruturas metálicas.</p>
                 <div class="social-icons">
                     <a href="https://www.instagram.com/nobremetalserralheria?utm_source=qr&igsh=MXQzcTU5Y3F0M3c1NQ==" class="text-light me-3"><i class="bi bi-instagram fs-4"></i></a>
                     <a href="https://wa.me/5519993805758" class="text-light"><i class="bi bi-whatsapp fs-4"></i></a>
@@ -112,13 +108,14 @@
                     <li><a href="#projetos" class="text-light text-decoration-none">Projetos</a></li>
                     <li><a href="#sobre" class="text-light text-decoration-none">Sobre</a></li>
                     <li><a href="#contato" class="text-light text-decoration-none">Contato</a></li>
+                    <li><a href="/login" class="text-light text-decoration-none">Login</a></li>
                 </ul>
                 </div>
 
                 <div class="col-md-3 mb-4">
                 <h5 class="fw-bold">Contato</h5>
                 <p><i class="bi bi-telephone me-2"></i> (19) 99380-5758</p>
-                <p><i class="bi bi-envelope me-2"></i> contato@nmserralheria.com.br</p>
+                <p><i class="bi bi-envelope me-2"></i> contato@nobremetalserralheria.com.br</p>
                 <p><i class="bi bi-geo-alt me-2"></i> Rua 13 de maio, 1087 - Santa Bábara D'Oeste</p>
                 </div>
 
