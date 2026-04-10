@@ -30,7 +30,9 @@
                             </div>
                         
                             <div class="d-flex justify-content-center">
-                                <button type="button" id="btnOrcamento" class="btn btn-success w-50 py-2"><i class="bi bi-send"></i> Enviar mensagem</button>
+                                <a href="mailto:contato@nobremetalserralheria.com.br" class="btn btn-success w-50 py-2">
+                                    <i class="bi bi-send"></i> Enviar mensagem
+                                </a>
                             </div>
                         </form>
                     </div>
