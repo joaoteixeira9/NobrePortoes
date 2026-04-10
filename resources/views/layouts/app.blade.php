@@ -90,8 +90,8 @@
 
     <footer class="mt-auto bg-dark text-light pt-5 pb-3">
         <div class="container">
-            <div class="row">
-                <div class="col-md-4 mb-4">
+            <div class="row g-5">
+                <div class="col-md-3 mb-4">
                 <h5 class="fw-bold">Nobre Metal Serralheria</h5>
                 <p>Excelência em portões automáticos, grades e estruturas metálicas.</p>
                 <div class="social-icons">
@@ -112,10 +112,10 @@
                 </ul>
                 </div>
 
-                <div class="col-md-3 mb-4">
+                <div class="col-md-4 mb-4">
                 <h5 class="fw-bold">Contato</h5>
                 <p><i class="bi bi-telephone me-2"></i> (19) 99380-5758</p>
-                <p><i class="bi bi-envelope me-2"></i> contato@nobremetalserralheria.com.br</p>
+                <p><i class="bi bi-envelope me-2"></i>contato@nobremetalserralheria.com.br</p>
                 <p><i class="bi bi-geo-alt me-2"></i> Rua 13 de maio, 1087 - Santa Bábara D'Oeste</p>
                 </div>
 
