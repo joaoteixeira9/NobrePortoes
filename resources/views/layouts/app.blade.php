@@ -115,7 +115,7 @@
                 <div class="col-md-4 mb-4">
                 <h5 class="fw-bold">Contato</h5>
                 <p><i class="bi bi-telephone me-2"></i> (19) 99380-5758</p>
-                <p><i class="bi bi-envelope me-2"></i>contato@nobremetalserralheria.com.br</p>
+                <p><i class="bi bi-envelope me-2"></i>contato@nobremetalserralheria.com</p>
                 <p><i class="bi bi-geo-alt me-2"></i> Rua 13 de maio, 1087 - Santa Bábara D'Oeste</p>
                 </div>
 
