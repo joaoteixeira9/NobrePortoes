@@ -13,10 +13,17 @@
     <div class="top-bar text-light bg-dark py-2">
         <div class="container">
             <div class="d-flex justify-content-between ">
-                <span class="ms-3">
+                <span>
                     Seg - Sex: 8h às 18h | Sáb: 8h às 12h <br>
                     Rua 13 de maio, 1087 - Santa Bábara D'Oeste <br>
-                    Atendemos em um raio de até 150 km
+                    Atendemos em um raio de até 150 km <br>
+                    <span>Siga-nos:</span><br>
+                    <a href="https://www.instagram.com/nobremetalserralheria" class="text-decoration-none text-light me-3">
+                        <i class="bi bi-instagram fs-5"></i> 
+                    </a>
+                    <a href="https://wa.me/5519993805758" class="text-light">
+                        <i class="bi bi-whatsapp fs-5"></i>
+                    </a>
                 </span>
             </div>
             <div class="d-flex justify-content-between align-items-center">
@@ -90,7 +97,7 @@
 
     <footer class="mt-auto bg-dark text-light pt-5 pb-3">
         <div class="container">
-            <div class="row g-5">
+            <div class="row g-4">
                 <div class="col-md-3 mb-4">
                 <h5 class="fw-bold">Nobre Metal Serralheria</h5>
                 <p>Excelência em portões automáticos, grades e estruturas metálicas.</p>
