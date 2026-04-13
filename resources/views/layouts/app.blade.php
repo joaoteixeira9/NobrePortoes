@@ -28,7 +28,7 @@
             </div>
             <div class="d-flex justify-content-between align-items-center">
                 @if(Auth::check())
-                    <div class="dropdown">
+                    <div class="mt-2 dropdown">
                         <a class="d-flex align-items-center text-decoration-none" href="#" role="button" id="userMenu" data-bs-toggle="dropdown" aria-expanded="false">
                             <div class="bg-white text-dark px-2 py-1 rounded shadow-sm d-flex justify-content-center align-items-center">
                                 <p class="mb-0 text-center text-uppercase fw-bold">{{ Auth::user()->name }}</p>
